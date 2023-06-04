@@ -3,7 +3,7 @@
 <head>
     <title>Random Insult Generator</title>
 </head>
-<body onload="generateInsult()">
+<body>
     <h1>Random Insult Generator</h1>
     <p>Insult of the day:</p>
     <p id="insult-text"></p>
@@ -27,6 +27,9 @@
             var insult = insults[randomIndex];
             document.getElementById("insult-text").textContent = insult;
         }
+
+        // Wait for the page to finish loading before generating insult
+        window.addEventListener('load', generateInsult);
     </script>
 </body>
 </html>
